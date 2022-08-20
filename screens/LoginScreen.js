@@ -8,6 +8,7 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.box}>
       {/* <Text>LoginScreen</Text> */}
       <View style={styles.top}>
         <Image source={require('../assets/small.png')} style={styles.logo} />
@@ -46,22 +47,30 @@ const LoginScreen = ({ navigation }) => {
         </TouchableOpacity>
 
         <View style={styles.icons}>
+          <TouchableOpacity>
           <Image
             source={require("../assets/goog.png")}
             style={styles.imageSmall}
           />
+          </TouchableOpacity>
+          <TouchableOpacity>
           <Image
             source={require("../assets/fb.png")}
             style={styles.imageSmallA}
           />
+          </TouchableOpacity>
+          <TouchableOpacity>
           <Image
             source={require("../assets/apple.png")}
             style={styles.imageSmallB}
           />
+          </TouchableOpacity>
+          <TouchableOpacity>
           <Image
             source={require("../assets/twitter.png")}
             style={styles.imageSmallC}
           />
+          </TouchableOpacity>
         </View>
 
         <TouchableOpacity
@@ -71,7 +80,7 @@ const LoginScreen = ({ navigation }) => {
           <Text style={styles.accountTxt}>Don't have an account?</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </View></View>
   );
 };
 
@@ -80,6 +89,18 @@ export default LoginScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // backgroundColor: "green"
+  },
+
+  box:{
+    // flex:1,
+    height: "98%",
+    width: "100%",
+    // borderBottomLeftRadius: 60,
+    // borderBottomRightRadius: 80,
+    borderTopRightRadius: 100,
+    borderTopLeftRadius: 100,
+    // backgroundColor: "red"
   },
 
   top: {
@@ -151,7 +172,7 @@ const styles = StyleSheet.create({
     width: 350,
     backgroundColor: "#caf8cf",
     borderRadius: 15,
-    marginVertical: 30,
+    marginVertical: 26,
     paddingVertical: 5,
     paddingHorizontal: 20,
     justifyContent: "center",
@@ -163,7 +184,7 @@ const styles = StyleSheet.create({
     width: 350,
     backgroundColor: "#caf8cf",
     borderRadius: 15,
-    marginVertical: 5,
+    marginVertical: 1,
     paddingVertical: 5,
     paddingHorizontal: 20,
     justifyContent: "center",
