@@ -1,13 +1,20 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
 import React from "react";
 
 const RegisterScreen = () => {
-
   const [userName, onChangeUName] = React.useState(null);
   const [fullName, onChangeFName] = React.useState(null);
   const [password, onChangePassword] = React.useState(null);
   const [newPass, onChangeNewPass] = React.useState(null);
   const [email, onChangeEmail] = React.useState(null);
+
 
   return (
     <View style={styles.container}>
@@ -43,68 +50,65 @@ const RegisterScreen = () => {
       </View>
 
       <View style={styles.second}>
-      <View style={styles.input}>
-        <TextInput
-        style={styles.inputTxt}
-        onChangeText={onChangeUName}
-        value={userName}
-        placeholder="Username"
-        placeholderTextColor="#949994"
-        fontSize={18}
-      />
+        <View style={styles.input}>
+          <TextInput
+            style={styles.inputTxt}
+            onChangeText={onChangeUName}
+            value={userName}
+            placeholder="Username"
+            placeholderTextColor="#949994"
+            fontSize={18}
+          />
         </View>
 
         <View style={styles.input}>
-        <TextInput
-        style={styles.inputTxt}
-        onChangeText={onChangeFName}
-        value={fullName}
-        placeholder="Full Name"
-        placeholderTextColor="#949994"
-        fontSize={18}
-      />
+          <TextInput
+            style={styles.inputTxt}
+            onChangeText={onChangeFName}
+            value={fullName}
+            placeholder="Full Name"
+            placeholderTextColor="#949994"
+            fontSize={18}
+          />
         </View>
 
         <View style={styles.input}>
-        <TextInput
-        style={styles.inputTxt}
-        onChangeText={onChangePassword}
-        value={password}
-        placeholder="Password"
-        placeholderTextColor="#949994"
-        fontSize={18}
-        secureTextEntry={true}
-      />
+          <TextInput
+            style={styles.inputTxt}
+            onChangeText={onChangePassword}
+            value={password}
+            placeholder="Password"
+            placeholderTextColor="#949994"
+            fontSize={18}
+            secureTextEntry={true}
+          />
         </View>
 
         <View style={styles.input}>
-        <TextInput
-        style={styles.inputTxt}
-        onChangeText={onChangeNewPass}
-        value={newPass}
-        placeholder="Re-enter Password"
-        placeholderTextColor="#949994"
-        fontSize={18}
-        secureTextEntry={true}
-      />
+          <TextInput
+            style={styles.inputTxt}
+            onChangeText={onChangeNewPass}
+            value={newPass}
+            placeholder="Re-enter Password"
+            placeholderTextColor="#949994"
+            fontSize={18}
+            secureTextEntry={true}
+          />
         </View>
 
         <View style={styles.input}>
-        <TextInput
-        style={styles.inputTxt}
-        onChangeText={onChangeEmail}
-        value={email}
-        placeholder="Email"
-        placeholderTextColor="#949994"
-        fontSize={18}
-      />
+          <TextInput
+            style={styles.inputTxt}
+            onChangeText={onChangeEmail}
+            value={email}
+            placeholder="Email"
+            placeholderTextColor="#949994"
+            fontSize={18}
+          />
         </View>
-
-
       </View>
       <View style={styles.third}>
-
-      <TouchableOpacity title="Login" style={styles.signup}>
+        <TouchableOpacity title="Login" style={styles.signup}>
           <Text style={styles.signupTxt}>Sign Up</Text>
         </TouchableOpacity>
       </View>
@@ -121,22 +125,21 @@ const styles = StyleSheet.create({
 
   first: {
     flex: 1.3,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   second: {
     flex: 2,
     // flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-evenly'
+    alignItems: "center",
+    justifyContent: "space-evenly",
   },
 
   third: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   signupA: {
@@ -173,7 +176,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     marginBottom: 5,
-    marginVertical: 10
+    marginVertical: 10,
   },
 
   input: {
@@ -188,7 +191,7 @@ const styles = StyleSheet.create({
   },
 
   inputTxt: {
-    fontSize: 18
+    fontSize: 18,
   },
 
   signup: {

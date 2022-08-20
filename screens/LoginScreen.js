@@ -1,87 +1,100 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
 import React from "react";
 
 const LoginScreen = ({ navigation }) => {
-
-    const [text, onChangeText] = React.useState(null);
-    const [number, onChangeNumber] = React.useState(null);
+  const [text, onChangeText] = React.useState(null);
+  const [number, onChangeNumber] = React.useState(null);
 
   return (
     <View style={styles.container}>
       <View style={styles.box}>
-      {/* <Text>LoginScreen</Text> */}
-      <View style={styles.top}>
-        <Image source={require('../assets/small.png')} style={styles.logo} />
+        {/* <Text>LoginScreen</Text> */}
+        <View style={styles.top}>
+          <Image source={require("../assets/small.png")} style={styles.logo} />
 
-        <Image source={require("../assets/image1.png")} style={styles.image} />
+          <Image
+            source={require("../assets/image1.png")}
+            style={styles.image}
+          />
+        </View>
+
+        <View style={styles.bottom}>
+          <Text style={styles.loginA}>Log in</Text>
+
+          <View style={styles.email}>
+            <TextInput
+              style={styles.input}
+              onChangeText={onChangeText}
+              value={text}
+              placeholder="Email"
+              placeholderTextColor="#949994"
+              fontSize={20}
+            />
+          </View>
+
+          <View style={styles.pass}>
+            <TextInput
+              style={styles.input}
+              onChangeText={onChangeNumber}
+              value={number}
+              placeholder="Password"
+              placeholderTextColor="#949994"
+              fontSize={20}
+              secureTextEntry={true}
+            />
+          </View>
+
+          <TouchableOpacity
+            title="Login"
+            style={styles.login}
+            onPress={() => navigation.navigate("Home")}
+          >
+            <Text style={styles.loginTxt}>Login</Text>
+          </TouchableOpacity>
+
+          <View style={styles.icons}>
+            <TouchableOpacity>
+              <Image
+                source={require("../assets/goog.png")}
+                style={styles.imageSmall}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require("../assets/fb.png")}
+                style={styles.imageSmallA}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require("../assets/apple.png")}
+                style={styles.imageSmallB}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={require("../assets/twitter.png")}
+                style={styles.imageSmallC}
+              />
+            </TouchableOpacity>
+          </View>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Register")}
+            style={styles.account}
+          >
+            <Text style={styles.accountTxt}>Don't have an account?</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-
-      <View style={styles.bottom}>
-        <Text style={styles.loginA}>Log in</Text>
-
-        <View style={styles.email}>
-        <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-        placeholder="Email"
-        placeholderTextColor="#949994"
-        fontSize={20}
-      />
-        </View>
-
-        <View style={styles.pass}>
-
-        <TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="Password"
-        placeholderTextColor="#949994"
-        fontSize={20}
-        secureTextEntry={true}
-      />
-        </View>
-
-        <TouchableOpacity title="Login" style={styles.login}>
-          <Text style={styles.loginTxt}>Login</Text>
-        </TouchableOpacity>
-
-        <View style={styles.icons}>
-          <TouchableOpacity>
-          <Image
-            source={require("../assets/goog.png")}
-            style={styles.imageSmall}
-          />
-          </TouchableOpacity>
-          <TouchableOpacity>
-          <Image
-            source={require("../assets/fb.png")}
-            style={styles.imageSmallA}
-          />
-          </TouchableOpacity>
-          <TouchableOpacity>
-          <Image
-            source={require("../assets/apple.png")}
-            style={styles.imageSmallB}
-          />
-          </TouchableOpacity>
-          <TouchableOpacity>
-          <Image
-            source={require("../assets/twitter.png")}
-            style={styles.imageSmallC}
-          />
-          </TouchableOpacity>
-        </View>
-
-        <TouchableOpacity
-          onPress={() => navigation.navigate("Register")}
-          style={styles.account}
-        >
-          <Text style={styles.accountTxt}>Don't have an account?</Text>
-        </TouchableOpacity>
-      </View>
-    </View></View>
+    </View>
   );
 };
 
@@ -93,7 +106,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "green"
   },
 
-  box:{
+  box: {
     // flex:1,
     height: "98%",
     width: "100%",
@@ -159,7 +172,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
-    marginBottom: 5
+    marginBottom: 5,
   },
 
   logo: {

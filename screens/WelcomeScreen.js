@@ -67,13 +67,13 @@ const styles = StyleSheet.create({
   head: {
     fontSize: 25,
     fontWeight: "600",
-    color: '#1ef42c'
+    color: "#1ef42c",
   },
 
   sub: {
     fontSize: 15,
     // fontWeight: '500'
-    color: '#fff'
+    color: "#fff",
   },
 
   login: {
@@ -84,13 +84,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#1ef42c",
     borderRadius: 20,
-    marginVertical: 10
+    marginVertical: 10,
   },
 
   loginTxt: {
     fontSize: 17,
-    fontWeight: '700',
-    color: '#fff'
+    fontWeight: "700",
+    color: "#fff",
   },
 
   account: {
