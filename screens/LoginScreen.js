@@ -39,6 +39,7 @@ const LoginScreen = ({ navigation }) => {
         placeholder="Password"
         placeholderTextColor="#949994"
         fontSize={20}
+        secureTextEntry={true}
       />
         </View>
 

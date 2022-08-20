@@ -73,6 +73,7 @@ const RegisterScreen = () => {
         placeholder="Password"
         placeholderTextColor="#949994"
         fontSize={18}
+        secureTextEntry={true}
       />
         </View>
 
@@ -84,6 +85,7 @@ const RegisterScreen = () => {
         placeholder="Re-enter Password"
         placeholderTextColor="#949994"
         fontSize={18}
+        secureTextEntry={true}
       />
         </View>
 
