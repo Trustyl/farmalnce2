@@ -7,6 +7,9 @@ import SplashScreen from "./screens/SplashScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import Home from "./screens/Home";
+import { TabBar } from "./components/BottomTab";
+import General from "./screens/General";
+import CamView from "./screens/CamView";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +17,11 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}>
       <Stack.Navigator>
+      <Stack.Screen
+          name="Logo"
+          component={SplashScreen}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen
           name="Welcome"
           component={WelcomeScreen}
@@ -30,8 +38,13 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Home"
-          component={Home}
+          name="General"
+          component={General}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CamView"
+          component={CamView}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
